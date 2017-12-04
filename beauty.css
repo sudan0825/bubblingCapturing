@@ -1,0 +1,115 @@
+/*
+ul{
+
+
+list-style: none;
+margin-top: 40px;
+padding-left: 0;
+
+
+
+}
+li{
+
+font-size: 30px;
+line-height:40px;
+
+
+}
+
+
+div{
+display: inline-block;
+width: 45%;
+height: 500px;
+background-color: antiquewhite;
+border: 1px solid gray;
+border-radius: 10px;
+margin: 20px;
+text-align: center;
+
+}*/
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+.heart{
+    position: relative;
+    padding-top: 35px;
+    text-align: center;
+    background-image: url('img/heart.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100px;
+    min-height: 80px;
+    display: inline-block;
+    display: none;
+
+}
+.heart:nth-child(odd){
+
+    float: right;
+    
+}
+.heart:nth-child(even){
+
+    float: left;
+    
+}
+
+/*
+#A,#B,#C,#D{
+    display: none;
+}
+*/
+
+
+
+
+/* Create the animation blocks */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin{
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Spinning, gradient circle; CSS only! */
+#ball {
+    width: 250px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    display: block;
+
+
+    margin: auto;
+    margin-top: 150px;
+
+
+    
+    background-image: url(img/spin.png);
+    
+
+    -webkit-animation:spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+    
+
+}
+
+
+#ball>*{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;
+}
+
