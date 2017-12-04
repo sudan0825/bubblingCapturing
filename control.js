@@ -6,43 +6,63 @@ $(document).ready(function(){
 
 
 var action = document.getElementById("ball");
-//var top = document.getElementById("left");
-
+var heartArray= document.getElementsByClassName("heart");
+    heartArray = Array.prototype.slice.apply(heartArray);
+    console.log(heartArray);
+ 
     
+    
+   
+    
+
+
+  for(let elem of document.querySelectorAll('*')){
+      
+    
+    elem.addEventListener("click", e=>{
+        
+        if(e.target.className=='heart'){
+            alert(`Capturing, from outside to inside: ${elem.tagName}`);
+           }
+             
+    },true);
+     elem.addEventListener("click", e=>{
+        if(e.target.className=='heart'){
+            alert(`Bubbling from inside to outside: ${elem.tagName}`);
+        }
+     
+    });
+}
 
 
 action.onclick=function(e){
  
     var clicktarget=e.target.attributes[1].value;
-    console.log(clicktarget);
+   
     switch(clicktarget){
         case 'A':
-            $('#happy').fadeIn(1000).fadeOut(3000);
+            $('#happy').fadeIn(500).fadeOut(3000);
+     
             break;
         case 'B':
-             $('#health').fadeIn(1000).fadeOut(3000);
+             $('#health').fadeIn(500).fadeOut(3000);
+          
             break;
         case 'C':
-             $('#lucky').fadeIn(1000).fadeOut(3000);
+             $('#lucky').fadeIn(500).fadeOut(3000);
+          
             break;
         case 'D':
-             $('#satisfied').fadeIn(1000).fadeOut(3000);
+             $('#satisfied').fadeIn(500).fadeOut(3000);
+        
             break;
-        default:
-            alert("Have better lucky next time");
-            
+     
                     }
+   
+    
    
 }
 
-
-
-//heartarray[0].addEventListener('click',function(e){
-// 
-//      heartarray[0].style.display="inline-block";
-//    
-// 
-//})
 
 
     
